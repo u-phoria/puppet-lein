@@ -7,7 +7,7 @@ class lein (
   exec { "/usr/bin/wget https://raw.github.com/technomancy/leiningen/$version/bin/lein":
       alias => "leinlatest",
       cwd => "$tmpdir/lein-$version",
-      creates => 'lein', # shouldn't do anything if already exists
+      creates => "$tmpdir/lein-$version/lein", # shouldn't do anything if already exists
   }
   file { "$destdir/lein": 
     ensure => present,
