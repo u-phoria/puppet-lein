@@ -11,7 +11,7 @@ class lein (
   }
   file { "$destdir/lein": 
     ensure => present,
-    source => '$tmpdir/lein-$version/lein',
+    source => "$tmpdir/lein-$version/lein",
     subscribe => Exec['leinlatest']
   }
 }
