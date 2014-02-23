@@ -17,5 +17,6 @@ class lein (
   file { "$destdir/lein": 
     ensure => present,
     source => "$tmpdir/lein-$version/lein",
+    mode => 755,
   }
 }
